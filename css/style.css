@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;900&family=Satisfy&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /*если блок 1200 пиксилей и мы добавим блок который будет его расстнягивать то используя это свойства такое происходить не будет*/
+}
+
+body {
+    margin: 0;
+    background-color: #020204;
+    font-family: 'Jost', sans-serif;
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+}
+
+.btn {
+    height: 50px;
+    min-width: 200px;
+    display: inline-flex;
+    /*расстягиваются в зависимости от контента внутри*/
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 10px;
+    transform: background-color .2s ease;
+}
+
+.btn.main {
+    background-color: #C7A17A;
+}
+
+.btn.main:hover {
+    background-color: #a88666;
+}
+
+.btn.secondary {
+    border: 1px solid #666681;
+}
+
+.btn.btn.secondary:hover {
+    background-color: #666681;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    border-bottom: 1px solid #32323D;
+}
+
+.header__line {
+    border-bottom: 1px solid #32323D;
+}
+
+.header__line-wrapper {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    /* работает только при наличии display: flex; выравнивает весь контент по вертикале внутри данного дива*/
+    justify-content: space-between;
+    /* работает только при наличии display: flex;*/
+
+}
+
+.header__lng {
+    display: flex;
+}
+
+.header__lng a {
+    margin-right: 10px;
+    font-weight: 600;
+    /*жирность шрифта*/
+    text-transform: uppercase;
+}
+
+.header__lng a.active {
+    color: #C7A17A;
+}
+
+.header__phone {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.header__wrapper {
+    height: 90px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__block {
+    width: 45%;
+}
+
+.header__block.right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav-footer{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nav-footer .nav__link{
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+
+.nav__link {
+    margin-right: 35px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color .2s ease;
+}
+
+.nav__link:hover {
+    color: #C7A17A;
+}
+
+.nav__link.active {
+    color: #C7A17A;
+}
+
+.logo {}
+
+.logo img {
+    height: 54px;
+}
+
+.header__actions {
+    display: flex;
+    align-items: center;
+}
+
+.header__link {
+    margin-right: 30px;
+    position: relative;
+}
+
+.header__link:last-child {
+    margin-right: 0;
+}
+
+.header__link-event {
+    height: 6px;
+    width: 6px;
+    background-color: #C7A17A;
+    display: block;
+    border-radius: 50%;
+    /*50% для круглого кружка*/
+    position: absolute;
+    /*чтобы элемент был по верх старницы*/
+    top: -3px;
+    right: -3px;
+}
+
+.intro {
+    margin-bottom: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.intro::after {
+    height: 100%;
+    width: 100%;
+    content: '';
+    /*обязательное свойство для псевдоэлемента*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(2, 2, 4, 0.55);
+    position: relative;
+    z-index: 2;
+}
+
+.intro__wrapper {
+    padding: 20px 0;
+    height: 720px;
+    display: flex;
+    align-items: center;
+}
+
+.intro__title {
+    margin: 0 0 35px;
+    line-height: 1.4;
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.intro__text {
+    margin: 0 0 35px;
+    font-size: 18px;
+}
+
+.intro__actions {
+    display: flex;
+}
+
+.intro__actions .btn.main {
+    margin-right: 20px;
+}
+
+.info__img-wrapper {
+    position: relative;
+}
+
+.info__img-wrapper::after {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    content: '';
+}
+
+
+.info__img {
+    /* border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; */
+    border-radius: 10px 0 0 10px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.info__block {
+    margin-bottom: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    border-radius: 10px;
+    background-color: #14141D;
+}
+
+.info__item {
+    padding: 30px;
+}
+
+.info__title {
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.info__text {
+    max-width: 500px;
+    font-size: 18px;
+    color: #DFDFDF;
+    line-height: 1.45;
+}
+
+.block__title {
+    margin: 0 0 40px;
+    line-height: 1;
+    font-size: 40px;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.products__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px 60px;
+}
+
+.products__block {
+    width: 33.33%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.products__item {
+    padding: 20px;
+    background-color: #2c2c34;
+    border-radius: 10px;
+    transition: background-color .2s ease;
+    display: block;
+}
+
+.products__item:hover {
+    background-color: #22222F;
+}
+
+.products__img {
+    margin: 0 auto 40px;
+    max-height: 200px;
+    min-width: 100px;
+    display: block;
+}
+
+.products__title {
+    margin: 0 0 25px;
+    line-height: 1.4;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.products__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.products__price {
+    font-size: 18px;
+    display: flex;
+}
+
+.products__price del {
+    margin-left: 30px;
+    color: #818181;
+}
+
+.products__favorite {
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+}
+
+.news__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px 60px;
+}
+
+.news__block {
+    width: 33.33%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.news__item {
+    border-radius: 10px;
+    min-height: 100%;
+    display: block;
+    background-color: #14141D;
+    transition: background-color .2s ease;
+}
+
+.news__img {
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px; 
+}
+
+.news__item:hover {
+    background-color: #22222F;
+}
+
+.news__content {
+    padding: 20px;
+}
+
+.news__title {
+    margin: 0 0 10px;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.news__text {
+    margin: 0;
+    color: #DFDFDF;
+}
+
+.footer{
+    border-top: 2px solid #14141D;
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+.footer__wrapper{
+    display: flex;
+    margin: 0 -10px;
+}
+
+.footer__block{
+     width: 33.33%;
+     padding: 0 10px;
+}
